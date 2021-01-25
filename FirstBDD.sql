@@ -98,7 +98,7 @@ CHANGE 'name' 'framework' VARCHAR(255);
 /*exo5-Dans la base de données webDevelopment, dans la table frameworks changer le type de la colonne version en VARCHAR de taille 10.*/
 USE 'webDevelopment';
 ALTER TABLE 'frameworks'
-MODIFY 'version' VARCHAR(10);
+MODIFY 'version' VARCHAR(12);
 
 /* PARTIE 4 */
 
@@ -115,14 +115,14 @@ USE 'wevDevelopment';
 ALTER TABLE 'languages'
 INSERT INTO 'languages' (language , version)
 VALUES 
-('JavaScript', 'version 5'),
-('JavaScript', 'version 6'),
-('JavaScript', 'version 7'),
-('JavaScript', 'version 8'),
-('PHP', 'version 5.2'),
-('PHP', 'version 5.4'),
-('PHP', 'version 7'),
-('HTML', 'version 5.1');
+('JavaScript', 'new 5'),
+('JavaScript', 'new 6'),
+('JavaScript', 'new 7'),
+('JavaScript', 'new 8'),
+('PHP', 'new 5.2'),
+('PHP', 'new 5.4'),
+('PHP', 'new 7'),
+('HTML', 'new 5.1');
 
 /*exo2-Insérez les données suivantes dans la table frameworks de la base webDevelopment :
 Symfony, version 2.8
@@ -133,24 +133,32 @@ USE 'wevDevelopment';
 ALTER TABLE 'frameworks'
 INSERT INTO 'frameworks' (language , version)
 VALUES 
-('Symphony', 'version 2.8'),
-('Symphony', 'version 3'),
-('Jquery', 'version 1.6'),
-('Jquery', 'version 2.10');
+('Symphony', 'new 2.8'),
+('Symphony', 'new 3'),
+('Jquery', 'new 1.6'),
+('Jquery', 'new 2.10');
 
 /* PARTIE 5 */
 
 /*exo1-Dans la table languages, afficher toutes les données de la table.*/
-SELECT
+USE 'wevDevelopment';
+ALTER TABLE 'languages',
+SELECT * FROM 'languages';
 
 /*exo2-Dans la table languages, afficher toutes les versions de PHP.*/
-SELECT 'PHP' FROM 'languages';
+USE 'wevDevelopment';
+ALTER TABLE 'languages',
+SELECT 'version' AS 'PHP';
 
 /*exo3-Dans la table languages, afficher toutes les versions de PHP et de JavaScript.*/
-
+USE 'wevDevelopment';
+ALTER TABLE 'languages',
+SELECT 'version' AS 'PHP' 'Javascript';
 
 
 /*exo4-Dans la table languages, afficher toutes les lignes ayant pour id 3,5,7.*/
+USE 'wevDevelopment';
+ALTER TABLE 'languages',
 
 
 

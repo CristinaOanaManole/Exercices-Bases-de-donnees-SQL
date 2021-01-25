@@ -17,10 +17,12 @@ CREATE TABLE 'clients' (
 )
 ENGINE=INNODB;
 ALTER TABLE 'clients' (
-    DROP 'secondPhoneNumber',
-CHANGE 'firstPhoneNumber' 'phoneNumber' INT,
-MODIFY 'phoneNumber' VARCHAR(12),
-ADD 'zipCode' VARCHAR(10),
-ADD 'city' VARCHAR(10)
-)
-ENGINE=INNODB;
+    DROP 'secondPhoneNumber');
+ALTER TABLE 'clients' (   
+CHANGE 'firstPhoneNumber' 'phoneNumber' INT);
+ALTER TABLE 'clients' (
+MODIFY 'phoneNumber' VARCHAR(12));
+ALTER TABLE 'clients' (
+ADD 'zipCode' VARCHAR(10));
+ALTER TABLE 'clients' (
+ADD 'city' VARCHAR(10));
