@@ -88,11 +88,79 @@ ADD 'versions' INT;
 /*exo3-Dans la base de données webDevelopment, dans la table languages renommer la colonne versions en version.*/
 USE 'webDevelopment';
 ALTER TABLE 'languages'
-MODIFY 'versions' 'version';
+CHANGE 'versions' 'version' VARCHAR(255);
 
 /*exo4-Dans la base de données webDevelopment, dans la table frameworks, renommer la colonne name en framework.*/
 USE 'webDevelopment';
 ALTER TABLE 'frameworks'
-MODIFY 'name' 'framework';
+CHANGE 'name' 'framework' VARCHAR(255);
 
 /*exo5-Dans la base de données webDevelopment, dans la table frameworks changer le type de la colonne version en VARCHAR de taille 10.*/
+USE 'webDevelopment';
+ALTER TABLE 'frameworks'
+MODIFY 'version' VARCHAR(10);
+
+/* PARTIE 4 */
+
+/*exo1-Insérez les données suivantes dans la table languages de la base webDevelopment :
+JavaScript, version 5
+PHP, version 5.2
+PHP, version 5.4
+HTML, version 5.1
+JavaScript, version 6
+JavaScript, version 7
+JavaScript, version 8
+PHP, version 7*/
+USE 'wevDevelopment';
+ALTER TABLE 'languages'
+INSERT INTO 'languages' (language , version)
+VALUES 
+('JavaScript', 'version 5'),
+('JavaScript', 'version 6'),
+('JavaScript', 'version 7'),
+('JavaScript', 'version 8'),
+('PHP', 'version 5.2'),
+('PHP', 'version 5.4'),
+('PHP', 'version 7'),
+('HTML', 'version 5.1');
+
+/*exo2-Insérez les données suivantes dans la table frameworks de la base webDevelopment :
+Symfony, version 2.8
+Symfony, version 3
+Jquery, version 1.6
+Jquery, version 2.10*/
+USE 'wevDevelopment';
+ALTER TABLE 'frameworks'
+INSERT INTO 'frameworks' (language , version)
+VALUES 
+('Symphony', 'version 2.8'),
+('Symphony', 'version 3'),
+('Jquery', 'version 1.6'),
+('Jquery', 'version 2.10');
+
+/* PARTIE 5 */
+
+/*exo1-Dans la table languages, afficher toutes les données de la table.*/
+SELECT
+
+/*exo2-Dans la table languages, afficher toutes les versions de PHP.*/
+SELECT 'PHP' FROM 'languages';
+
+/*exo3-Dans la table languages, afficher toutes les versions de PHP et de JavaScript.*/
+
+
+
+/*exo4-Dans la table languages, afficher toutes les lignes ayant pour id 3,5,7.*/
+
+
+
+/*exo5-Dans la table languages, afficher les deux première entrées de JavaScript.*/
+
+
+/*exo6-Dans la table languages, afficher toutes les lignes qui ne sont pas du PHP.*/
+
+
+/*exo7-Dans la table languages, afficher toutes les données par ordre alphabétique.*/
+
+
+
