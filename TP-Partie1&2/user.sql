@@ -4,15 +4,17 @@ renommer la colonne firstPhoneNumber en phoneNumber
 changer le type de la colonne phoneNumber en VARCHAR
 ajouter les colonnes zipCode(VARCHAR) et city(VARCHAR) */
 
-CREATE DATABASE 'codex' CHARACTER SET utf8_general_ci;
-CREATE TABLE 'clients' (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    lastname VARCHAR(100),
-    firstname VARCHAR(100),
-    birthDate DATE,
-    adresse VARCHAR(100),
-    firstPhoneNumber INT,
-    secondPhoneNumber INT,
-    mail VARCHAR (100)
-)
-ENGINE=INNODB;
+CREATE DATABASE `codex`;
+USE `codex`;
+CREATE TABLE IF NOT EXISTS `clients`(
+    `id` INT UNSIGNED AUTO_INCREMENT,
+    `lastname`VARCHAR(40),
+    `firstname`VARCHAR(40),
+    `birthDate` DATE, -- DATE permet de spécifier que la colonne est de type date.
+    `address`VARCHAR(100),
+    `firstPhoneNumber`INT,
+    `secondPhoneNumber`INT,
+    `mail`VARCHAR(20),
+    PRIMARY KEY (id)
+    ) 
+    ENGINE=INNODB;
