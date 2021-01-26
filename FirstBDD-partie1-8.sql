@@ -310,7 +310,7 @@ INSERT INTO `frameworks` (`name`,`languagesId`) VALUES ('Django',11);
 INSERT INTO `frameworks` (`name`,`languagesId`) VALUES ('Ruby On Rails',12);
 
 /*exo1-Dans la table frameworks, afficher toutes les données de la table ayant une version 2.x (x étant un numéro quelconque).*/
-SELECT * FROM `frameworks` WHERE 'new'
+
 
 
 /*exo2-Dans la table frameworks, afficher toutes les lignes ayant pour id 1 et 3.*/
