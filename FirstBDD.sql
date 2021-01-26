@@ -148,17 +148,14 @@ SELECT * FROM 'languages';
 /*exo2-Dans la table languages, afficher toutes les versions de PHP.*/
 USE 'wevDevelopment';
 ALTER TABLE 'languages',
-SELECT 'version' AS 'PHP';
+SELECT * FROM `languages` WHERE `languages`= 'PHP';
 
 /*exo3-Dans la table languages, afficher toutes les versions de PHP et de JavaScript.*/
 USE 'wevDevelopment';
 ALTER TABLE 'languages',
-SELECT 'version' AS 'PHP' 'Javascript';
-
+SELECT * FROM `languages` WHERE `languages` <> 'HTML';
 
 /*exo4-Dans la table languages, afficher toutes les lignes ayant pour id 3,5,7.*/
-USE 'wevDevelopment';
-ALTER TABLE 'languages',
 
 
 
